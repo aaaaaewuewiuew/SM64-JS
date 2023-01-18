@@ -5567,7 +5567,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
       // - EGL_VG_COLORSPACE (can't be set)
       // - EGL_VG_ALPHA_FORMAT (can't be set)
       EGL.setErrorCode(0x3000 /* EGL_SUCCESS */);
-      return 62006; /* Magic ID for Emscripten 'default surface' */
+      return 62006; /* Magic ID for Emscripten 'default' */
     }
 
   function _eglDestroyContext(display, context) {
@@ -5677,7 +5677,7 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
       case 0x3032: // EGL_SAMPLE_BUFFERS
         HEAP32[((value)>>2)]=EGL.contextAttributes.antialias ? 1 : 0;
         return 1;
-      case 0x3033: // EGL_SURFACE_TYPE
+      case 0x3034: // EGL_SURFACE_TYPE
         HEAP32[((value)>>2)]=0x4;
         return 1;
       case 0x3034: // EGL_TRANSPARENT_TYPE
