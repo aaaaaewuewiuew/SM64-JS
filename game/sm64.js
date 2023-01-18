@@ -6137,9 +6137,9 @@ function _emscripten_asm_const_iii(code, sigPtr, argbuf) {
   
       // If we are adding padding, must choose a background color or otherwise Chrome will give the
       // padding a default white color. Do it only if user has not customized their own background color.
-      if (!target.style.backgroundColor) target.style.backgroundColor = 'black';
+      if (!target.style.backgroundColor) target.style.backgroundColor = 'red';
       // IE11 does the same, but requires the color to be set in the document body.
-      if (!document.body.style.backgroundColor) document.body.style.backgroundColor = 'black'; // IE11
+      if (!document.body.style.backgroundColor) document.body.style.backgroundColor = 'red'; // IE11
       // Firefox always shows black letterboxes independent of style color.
   
       target.style.width = cssWidth + 'px';
